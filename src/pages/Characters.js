@@ -18,7 +18,7 @@ export default function Characters() {
       });
   }, [pagecount]);
 
-  if (isLoading) {
+  if (isLoading || characters === null) {
     return "...Loading";
   }
 

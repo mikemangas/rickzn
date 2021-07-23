@@ -14,3 +14,15 @@
   border: var(--green) 2px solid;
   margin: 5%;
 }
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.button__container button {
+  padding: 10px;
+  background-color: var(--green);
+  color: var(--bluegreen);
+}
