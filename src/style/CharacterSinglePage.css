@@ -1,0 +1,16 @@
+.character__singlePage--inner {
+  background-color: var(--bluegreen);
+  padding: 10%;
+}
+
+.character__singlePage--inner img {
+  border-radius: 50%;
+  border: var(--green) 2px solid;
+}
+
+.character__singlePage h2 {
+  background-color: whitesmoke;
+  box-shadow: black 1px;
+  border: var(--green) 2px solid;
+  margin: 5%;
+}

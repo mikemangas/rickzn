@@ -17,9 +17,9 @@ export default function Characters() {
     return characters.map((character) => {
       const id = character?.id;
       return (
-        <div key={id} className="characters-wrapper">
+        <div key={id} className="characters__wrapper">
           <Link to={`/characters/${id}`}>
-            <h2>{character?.name}</h2>
+            <h3>{character?.name}</h3>
             <img src={character?.image} alt={character?.name}></img>
           </Link>
         </div>
@@ -27,5 +27,5 @@ export default function Characters() {
     });
   }
 
-  return renderCharacters();
+  return <div className="characters__wrapper--main">{renderCharacters()}</div>;
 }

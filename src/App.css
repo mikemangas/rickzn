@@ -1,3 +1,16 @@
+@import "/src/style/color.css";
+@import "/src/style/CharacterSinglePage.css";
+@import "/src/style/Characters.css";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--blue);
+}
+
 .App {
   text-align: center;
   display: grid;
@@ -8,26 +21,43 @@
 .App__header {
   display: flex;
   justify-content: right;
-  border-bottom: 1px green solid;
-  margin-left: 3%;
-  margin-right: 3%;
+  align-items: center;
+  border-bottom: 2px var(--green) dotted;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .App__header__navLinks {
   display: flex;
   justify-content: right;
   gap: 20px;
-  align-items: center;
   margin-left: 5%;
 }
 
+.App__header__navLinks a {
+  background-color: var(--blue);
+  padding: 10px;
+  color: var(--green);
+}
+
+.App__header__navLinks a:hover {
+  opacity: 90%;
+  padding: 15px;
+}
+
 .App__header__logo {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: left;
+  width: 40%;
+  height: 40%;
 }
 
 .home__rick__img {
   width: 100%;
+}
+
+.App__footer {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
