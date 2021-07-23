@@ -6,7 +6,7 @@ export default function Main() {
   return (
     <main className="App__main">
       <Switch>
-        <Route path="/characters/:id">
+        <Route path="/characters/:characterId">
           <CharacterSinglePage />
         </Route>
         <Route path="/characters">
