@@ -12,6 +12,6 @@
 .characters__wrapper img {
   width: 40%;
   padding: 10px;
-  border: 1px var(--blue) dotted;
+  border: 3px var(--blue) dotted;
   border-radius: 50%;
 }
