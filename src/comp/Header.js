@@ -5,7 +5,10 @@ export default function Header() {
   return (
     <header className="App__header">
       <div className="App__header--left">
-        <img class="App__header__logo" src={logo} alt="rickNmorty-logo"></img>
+        <NavLink to="/">
+          {" "}
+          <img class="App__header__logo" src={logo} alt="rickNmorty-logo"></img>
+        </NavLink>
       </div>
       <div className="App__header__navLinks">
         <NavLink to="/">Home</NavLink>

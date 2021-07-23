@@ -20,7 +20,7 @@ h6 {
 
 .App__header {
   display: flex;
-  justify-content: right;
+  justify-content: space-between;
   align-items: center;
   border-bottom: 2px var(--green) dotted;
   margin-left: 5%;
@@ -34,6 +34,17 @@ h6 {
   margin-left: 5%;
 }
 
+.App__header__navLinks a {
+  background-color: var(--blue);
+  padding: 10px;
+  color: var(--green);
+}
+
+.App__header__navLinks a:hover {
+  opacity: 80%;
+  padding: 12px;
+}
+
 .App__header--left {
   display: flex;
   justify-content: left;
@@ -42,16 +53,6 @@ h6 {
 .App__header__logo {
   width: 100%;
   height: auto;
-}
-.App__header__navLinks a {
-  background-color: var(--blue);
-  padding: 10px;
-  color: var(--green);
-}
-
-.App__header__navLinks a:hover {
-  opacity: 90%;
-  padding: 15px;
 }
 
 .home__rick__img {
