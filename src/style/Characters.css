@@ -5,12 +5,13 @@
 
 .characters__wrapper {
   background-color: var(--green);
+  border: 3px var(--blue) dotted;
   margin: 10px;
 }
 
 .characters__wrapper img {
   width: 40%;
   padding: 10px;
-  border: 1px var(--blue) solid;
+  border: 1px var(--blue) dotted;
   border-radius: 50%;
 }
