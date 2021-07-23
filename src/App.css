@@ -35,7 +35,7 @@ h6 {
 }
 
 .App__header__navLinks a {
-  background-color: var(--blue);
+  background-color: var(--bluegreen);
   padding: 10px;
   color: var(--green);
 }
@@ -72,4 +72,17 @@ h6 {
 .App__footer--contact {
   display: flex;
   gap: 30px;
+}
+
+.characters__wrapper--main__button--load {
+  padding: 10px;
+  background-color: var(--bluegreen);
+  color: var(--green);
+}
+
+.characters__wrapper--main__button--wrapper {
+  display: flex;
+  margin: 15px;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
