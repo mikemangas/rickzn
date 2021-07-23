@@ -4,7 +4,7 @@ import Characters from "../pages/Characters";
 import CharacterSinglePage from "../pages/CharacterSinglePage";
 export default function Main() {
   return (
-    <main>
+    <main className="App__main">
       <Switch>
         <Route path="/characters/:id">
           <CharacterSinglePage />
