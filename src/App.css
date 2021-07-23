@@ -14,7 +14,7 @@ h6 {
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 15vh auto 10vh;
+  grid-template-rows: 15vh auto 15vh;
   height: 100vh;
 }
 
@@ -63,6 +63,13 @@ h6 {
   background-color: var(--blue);
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 10px;
   justify-content: center;
   color: white;
+}
+
+.App__footer--contact {
+  display: flex;
+  gap: 30px;
 }
