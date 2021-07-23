@@ -1,0 +1,14 @@
+.characters__wrapper--main {
+  display: grid;
+  grid-template-columns: 50vw 50vw;
+}
+
+.characters__wrapper {
+  background-color: var(--green);
+  margin: 10px;
+}
+
+.characters__wrapper img {
+  width: 40%;
+  padding: 20px;
+}
