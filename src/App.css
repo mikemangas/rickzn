@@ -34,6 +34,15 @@ h6 {
   margin-left: 5%;
 }
 
+.App__header--left {
+  display: flex;
+  justify-content: left;
+}
+
+.App__header__logo {
+  width: 100%;
+  height: auto;
+}
 .App__header__navLinks a {
   background-color: var(--blue);
   padding: 10px;
@@ -43,11 +52,6 @@ h6 {
 .App__header__navLinks a:hover {
   opacity: 90%;
   padding: 15px;
-}
-
-.App__header__logo {
-  width: 40%;
-  height: 40%;
 }
 
 .home__rick__img {
