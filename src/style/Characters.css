@@ -39,5 +39,9 @@
 .characters--filter {
   padding: 10px;
   background-color: var(--blue);
-  color: var(--bluegreen);
+  color: white;
+}
+
+.character__singlePage h2 {
+  padding: 10px;
 }
