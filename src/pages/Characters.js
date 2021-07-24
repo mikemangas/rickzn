@@ -6,6 +6,7 @@ export default function Characters() {
   const [pagecount, setPagecount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState();
+  const [status, setStatus] = useState();
 
   useEffect(() => {
     setIsLoading(true);
@@ -23,10 +24,17 @@ export default function Characters() {
   }
 
   function renderCharacters() {
+    console.log(characters.input);
     return characters
       .filter((character) => {
         return (
           character.name.toLowerCase().includes(input) || input === undefined
+        );
+      })
+      .filter((character) => {
+        return (
+          character.status.toLowerCase().includes(status) ||
+          status === undefined
         );
       })
       .map((character) => {
@@ -56,6 +64,14 @@ export default function Characters() {
 
     setInput(inputToLowerCase);
   }
+
+  function handleOnChangeSelect(event) {
+    const statusInput = event.target.value;
+    const statusInputToLowerCase = statusInput.toLowerCase();
+
+    setStatus(statusInputToLowerCase);
+  }
+
   return (
     <>
       <input
@@ -64,6 +80,12 @@ export default function Characters() {
         type="text"
         placeholder="filter by name"
       ></input>
+      <select onChange={handleOnChangeSelect}>
+        <option value="">All</option>
+        <option value="Alive">Alive</option>
+        <option value="Dead">Dead</option>
+        <option value="Unknown">Unknown</option>
+      </select>
       <p>{input}</p>
       <div className="characters__wrapper--main">{renderCharacters()}</div>
       <div className="characters__wrapper--main__button--wrapper">
