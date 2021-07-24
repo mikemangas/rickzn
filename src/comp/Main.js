@@ -7,10 +7,10 @@ export default function Main() {
   return (
     <main className="App__main">
       <Switch>
-        <Route exact path="/characters/:characterId">
+        <Route exact path="/characterz/:characterId">
           <CharacterSinglePage />
         </Route>
-        <Route exact path="/characters">
+        <Route exact path="/characters/:charactersId">
           <Characters />
         </Route>
         <Route exact path="/">

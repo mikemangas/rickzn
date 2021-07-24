@@ -1,23 +1,24 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, useHistory } from "react-router-dom";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
-  const [pagecount, setPagecount] = useState(1);
   const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState();
   const [status, setStatus] = useState();
+  const { charactersId } = useParams(1);
+  const history = useHistory();
 
   useEffect(() => {
     setIsLoading(true);
-    const url = `https://rickandmortyapi.com/api/character/?page=${pagecount}`;
+    const url = `https://rickandmortyapi.com/api/character/?page=${charactersId}`;
     fetch(url)
       .then((res) => res.json())
       .then((characterData) => {
         setCharacters(characterData.results);
         setIsLoading(false);
       });
-  }, [pagecount]);
+  }, [charactersId]);
 
   if (isLoading || characters === null) {
     return "...Loading";
@@ -41,7 +42,7 @@ export default function Characters() {
         const id = character?.id;
         return (
           <div key={id} className="characters__wrapper">
-            <Link to={`/characters/${id}`}>
+            <Link to={`/characterz/${id}`}>
               <h3>{character?.name}</h3>
               <img src={character?.image} alt={character?.name}></img>
             </Link>
@@ -50,12 +51,12 @@ export default function Characters() {
       });
   }
 
-  function handleOnClickButtonLoadNext() {
-    setPagecount(pagecount + 1);
+  function handleClickNext() {
+    history.push(`/characters/${Number(charactersId) + 1} `);
   }
 
-  function handleOnClickButtonLoadPrev() {
-    setPagecount(pagecount - 1);
+  function handleClickPrevious() {
+    history.push(`/characters/${Number(charactersId) - 1} `);
   }
 
   function handleOnChange(event) {
@@ -96,14 +97,14 @@ export default function Characters() {
       <div className="characters__wrapper--main">{renderCharacters()}</div>
       <div className="characters__wrapper--main__button--wrapper">
         <button
-          onClick={handleOnClickButtonLoadPrev}
+          onClick={handleClickPrevious}
           className="characters__wrapper--main__button--load"
         >
           Previous
         </button>
         <button
-          onClick={handleOnClickButtonLoadNext}
           className="characters__wrapper--main__button--load"
+          onClick={handleClickNext}
         >
           Next
         </button>
