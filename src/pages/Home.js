@@ -1,4 +1,4 @@
-import rickhome from "../img/RickMorty.webp";
+import rickhome from "../img/rick-and-morty-home.jpg";
 
 export default function Home() {
   return (
