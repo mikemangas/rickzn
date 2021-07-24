@@ -92,8 +92,6 @@ export default function Characters() {
           <option value="Unknown">Unknown</option>
         </select>
       </div>
-
-      <p>{input}</p>
       <div className="characters__wrapper--main">{renderCharacters()}</div>
       <div className="characters__wrapper--main__button--wrapper">
         <button
