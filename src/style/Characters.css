@@ -28,3 +28,16 @@
   flex-direction: row;
   justify-content: space-evenly;
 }
+
+.character--filter {
+  display: flex;
+  margin: 15px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.characters--filter {
+  padding: 10px;
+  background-color: var(--blue);
+  color: var(--bluegreen);
+}
