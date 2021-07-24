@@ -15,3 +15,16 @@
   border: 3px var(--blue) dotted;
   border-radius: 50%;
 }
+
+.characters__wrapper--main__button--load {
+  padding: 10px;
+  background-color: var(--bluegreen);
+  color: var(--green);
+}
+
+.characters__wrapper--main__button--wrapper {
+  display: flex;
+  margin: 15px;
+  flex-direction: row;
+  justify-content: space-evenly;
+}

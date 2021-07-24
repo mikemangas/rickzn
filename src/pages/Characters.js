@@ -3,15 +3,24 @@ import { Link } from "react-router-dom";
 
 export default function Characters() {
   const [characters, setCharacters] = useState([]);
+  const [pagecount, setPagecount] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    const url = "https://rickandmortyapi.com/api/character";
+    setIsLoading(true);
+    const url = `https://rickandmortyapi.com/api/character/?page=${pagecount}`;
+    console.log(url);
     fetch(url)
       .then((res) => res.json())
       .then((characterData) => {
         setCharacters(characterData.results);
+        setIsLoading(false);
       });
-  }, []);
+  }, [pagecount]);
+
+  if (isLoading || characters === null) {
+    return "...Loading";
+  }
 
   function renderCharacters() {
     return characters.map((character) => {
@@ -27,5 +36,31 @@ export default function Characters() {
     });
   }
 
-  return <div className="characters__wrapper--main">{renderCharacters()}</div>;
+  function handleOnClickButtonLoadNext() {
+    setPagecount(pagecount + 1);
+  }
+
+  function handleOnClickButtonLoadPrev() {
+    setPagecount(pagecount - 1);
+  }
+
+  return (
+    <>
+      <div className="characters__wrapper--main">{renderCharacters()}</div>
+      <div className="characters__wrapper--main__button--wrapper">
+        <button
+          onClick={handleOnClickButtonLoadPrev}
+          className="characters__wrapper--main__button--load"
+        >
+          Previous
+        </button>
+        <button
+          onClick={handleOnClickButtonLoadNext}
+          className="characters__wrapper--main__button--load"
+        >
+          Next
+        </button>
+      </div>
+    </>
+  );
 }
