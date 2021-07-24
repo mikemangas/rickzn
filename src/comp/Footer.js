@@ -8,7 +8,7 @@ export default function Footer() {
         <p>Made with love by Mike</p>
       </div>
       <div className="App__footer--contact">
-        <a className="App__footer--contact--phone" href="tel:+49176567360">
+        <a className="App__footer--contact--phone" href="tel:+4917656763760">
           <img src={phone} alt="phone-call"></img>
         </a>
         <a

@@ -22,6 +22,10 @@
   color: var(--green);
 }
 
+.characters__wrapper a:link {
+  text-decoration: none;
+}
+
 .characters__wrapper--main__button--wrapper {
   display: flex;
   margin: 15px;
