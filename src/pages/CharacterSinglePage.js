@@ -9,7 +9,6 @@ export default function CharacterSinglePage() {
 
   useEffect(() => {
     const url = `https://rickandmortyapi.com/api/character/${characterId}`;
-    console.log(url);
     setIsLoading(true);
     fetch(url)
       .then((res) => res.json())
@@ -27,6 +26,10 @@ export default function CharacterSinglePage() {
     history.push(`/characterz/${Number(characterId) - 1} `);
   }
 
+  function handleFavouriteButton() {
+    localStorage.setItem("id", characterId);
+  }
+
   function renderCharacters() {
     if (isLoading || character === null) {
       return "... loading";
@@ -35,7 +38,14 @@ export default function CharacterSinglePage() {
 
     return (
       <div className="character__singlePage">
+        <button
+          onClick={handleFavouriteButton}
+          className="characters__singlePage__favouritebutton"
+        >
+          x
+        </button>
         <h2>{name}</h2>
+
         <div className="character__singlePage--inner">
           <div className="button__container">
             <button onClick={handleClickPrevious}>Previous Character</button>

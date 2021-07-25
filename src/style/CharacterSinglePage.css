@@ -26,3 +26,9 @@
   background-color: var(--green);
   color: var(--bluegreen);
 }
+
+.characters__singlePage__favouritebutton {
+  width: 10%;
+  height: 10%;
+  background-color: var(--green);
+}
