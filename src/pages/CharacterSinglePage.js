@@ -20,11 +20,11 @@ export default function CharacterSinglePage() {
   }, [characterId]);
 
   function handleClickNext() {
-    history.push(`/characters/${Number(characterId) + 1} `);
+    history.push(`/characterz/${Number(characterId) + 1} `);
   }
 
   function handleClickPrevious() {
-    history.push(`/characters/${Number(characterId) - 1} `);
+    history.push(`/characterz/${Number(characterId) - 1} `);
   }
 
   function renderCharacters() {

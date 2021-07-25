@@ -59,6 +59,10 @@ h6 {
   width: 100%;
 }
 
+.App__main {
+  overflow-y: scroll;
+}
+
 .App__footer {
   background-color: var(--blue);
   display: flex;
@@ -71,5 +75,21 @@ h6 {
 
 .App__footer--contact {
   display: flex;
-  gap: 30px;
+  gap: 20px;
+}
+.App__footer--contact img {
+  width: 20%;
+  height: auto;
+  filter: invert(66%) sepia(73%) saturate(324%) hue-rotate(43deg)
+    brightness(97%) contrast(83%);
+}
+
+.App__footer--contact--phone {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.App__footer--contact--email {
+  display: flex;
+  justify-content: flex-start;
 }

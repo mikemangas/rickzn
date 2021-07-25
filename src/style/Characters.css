@@ -22,6 +22,10 @@
   color: var(--green);
 }
 
+.characters__wrapper a:link {
+  text-decoration: none;
+}
+
 .characters__wrapper--main__button--wrapper {
   display: flex;
   margin: 15px;
@@ -39,5 +43,9 @@
 .characters--filter {
   padding: 10px;
   background-color: var(--blue);
-  color: var(--bluegreen);
+  color: white;
+}
+
+.character__singlePage h2 {
+  padding: 10px;
 }
