@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 
 export default function CharacterSinglePage() {
-  const { characterId } = useParams();
+  const { characterId } = useParams([]);
   const [character, setCharacter] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -27,7 +27,25 @@ export default function CharacterSinglePage() {
   }
 
   function handleFavouriteButton() {
-    localStorage.setItem("id", characterId);
+    // localStorage.setItem("id", characterId);
+
+    const characterObj = {
+      name: character.name,
+      image: character.image,
+    };
+    const storage = localStorage.getItem("characterObj");
+    if (storage !== null) {
+      const storedCharacter = storage;
+      const favouriteCharacter = JSON.parse(storedCharacter);
+      favouriteCharacter.push(characterObj);
+      localStorage.setItem("characterObj", JSON.stringify(favouriteCharacter));
+    } else {
+      const favouriteCharacter = [];
+      favouriteCharacter.push(characterObj);
+      localStorage.setItem("characterObj", JSON.stringify(favouriteCharacter));
+    }
+
+    alert(`Character successfully saved in favourites`);
   }
 
   function renderCharacters() {
@@ -38,13 +56,13 @@ export default function CharacterSinglePage() {
 
     return (
       <div className="character__singlePage">
+        <h2>{name}</h2>
         <button
           onClick={handleFavouriteButton}
           className="characters__singlePage__favouritebutton"
         >
-          x
+          Save this Character
         </button>
-        <h2>{name}</h2>
 
         <div className="character__singlePage--inner">
           <div className="button__container">

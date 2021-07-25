@@ -28,7 +28,7 @@
 }
 
 .characters__singlePage__favouritebutton {
-  width: 10%;
-  height: 10%;
   background-color: var(--green);
+  padding: 10px;
+  margin: 10px;
 }
