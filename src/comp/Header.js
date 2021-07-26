@@ -11,8 +11,8 @@ export default function Header() {
         </NavLink>
       </div>
       <div className="App__header__navLinks">
-        <NavLink to="/">Home</NavLink>
         <NavLink to="/characters/1">Characters</NavLink>
+        <NavLink to="/favourite">Favourites</NavLink>
       </div>
     </header>
   );

@@ -25,7 +25,6 @@ export default function Characters() {
   }
 
   function renderCharacters() {
-    console.log(characters.input);
     return characters
       .filter((character) => {
         return (
