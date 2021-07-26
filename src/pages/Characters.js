@@ -6,7 +6,7 @@ export default function Characters() {
   const [isLoading, setIsLoading] = useState(false);
   const [input, setInput] = useState();
   const [status, setStatus] = useState();
-  const { charactersId } = useParams(1);
+  const { charactersId } = useParams();
   const history = useHistory();
 
   useEffect(() => {

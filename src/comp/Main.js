@@ -8,19 +8,19 @@ export default function Main() {
   return (
     <main className="App__main">
       <Switch>
-        <Route exact path="/characterz/:characterId">
+        <Route path="/characterz/:characterId">
           <CharacterSinglePage />
         </Route>
-        <Route exact path="/characters/:charactersId">
+        <Route path="/characters/:charactersId">
           <Characters />
         </Route>
-        <Route exact path="/favourite">
+        <Route path="/favourite">
           <FavouritePage />
         </Route>
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/">
+        <Route path="*">
           <NoMatch />
         </Route>
       </Switch>
